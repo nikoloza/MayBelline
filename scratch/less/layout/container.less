@@ -1,7 +1,17 @@
 section.container {
 	position: relative;
 	max-width: @container-max-width;
-	max-width: @container-min-width;
+	min-width: @container-min-width;
+	margin: 0 auto;
 	.sizing;
 	.clearfix;
+
+	background: url('@{img-path}/background.jpg') center center no-repeat;
+	.bgsize(cover);
+
+    & when (@sticky-footer = true) {
+	    min-height: 100%;
+	    padding-bottom: @footer-height;
+	    margin-bottom: -@footer-height;
+	}
 }

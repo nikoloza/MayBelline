@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="MayBelline">
 <head>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="img/favicon.png?v=1.1">
 
-	<title>Scratch - New HTML5 and Less boilerplate</title>
+	<title>MayBelline</title>
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -22,23 +22,17 @@
 </head>
 <body>
 
-	<!-- HTML Layout here -->
-	<section class="wrapper">
-		<header class="header">
-			<a class="logo"></a>
-			<nav class="nav"></nav>
-		</header>
+	<section class="container">
 
-		<section class="container">
-			<aside class="aside"></aside>
-			<section class="content"></section>
-		</header>
+		<ul class="instagram row8 mobile4" ng-controller="instagramCtrl">
+			<li ng-repeat="pic in pics | limitTo:8">
+				<a ng-href="{{pic.link}}" target="_blank">
+					<img ng-src="{{pic.images.low_resolution.url}}" alt="">
+				</a>
+			</li>
+		</ul>
+
 	</section>
-
-	<footer class="footer">
-		<nav></nav>
-		<p class="copyright"></p>
-	</footer>
 
 	<!-- Javascripts -->
 	<script type="text/javascript" src="scratch/lib.min.js"></script>

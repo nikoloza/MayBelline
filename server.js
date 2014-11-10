@@ -1,6 +1,7 @@
 var express = require('express'),
     app = express();
 
+app.use('/app', express.static(__dirname + '/app'));
 app.use('/scratch', express.static(__dirname + '/scratch'));
 
 app.get('*', function (req, res) {

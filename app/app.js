@@ -19,4 +19,3 @@ app.controller('instagramCtrl', function ($scope, instagram){
 		$scope.pics = data;
 	});
 });
-//# sourceMappingURL=app.map

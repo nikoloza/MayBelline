@@ -214,8 +214,12 @@
 }
 html {
   font-size: 10px;
+  position: relative;
+  height: 100%;
 }
 body {
+  position: relative;
+  height: 100%;
   padding: 0;
   margin: 0;
   line-height: 1;
@@ -2922,7 +2926,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 <i class="icon-home"></i>
 ```
 */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) {
   .sprite {
     background: url('img/transparent@2x.png') no-repeat 0 0;
     background-size: 100%;
@@ -5734,20 +5738,23 @@ Icon classes can be used entirely standalone. They are named after their origina
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-section.wrapper {
-  position: relative;
-  min-height: 100%;
-  padding-bottom: 5rem;
-  margin-bottom: -5rem;
-}
 section.container {
   position: relative;
   max-width: 160rem;
-  max-width: 32rem;
+  min-width: 32rem;
+  margin: 0 auto;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
+  background: url('img/background.jpg') center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+  padding-bottom: 6rem;
+  margin-bottom: -6rem;
 }
 section.container:after {
   content: "";
@@ -5757,7 +5764,7 @@ section.container:after {
   float: none;
 }
 footer.footer {
-  height: 5rem;
+  height: 6rem;
 }
 ::selection {
   background-color: #000000;
