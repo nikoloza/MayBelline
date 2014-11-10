@@ -5,12 +5,30 @@ section.container {
 	.sizing;
 	.clearfix;
 
-	background: url('@{img-path}/background.jpg') center center no-repeat;
-	.bgsize(cover);
+	// background: url('@{img-path}/background.jpg') center center no-repeat;
+	// .bgsize(cover);
+
+	background: url('@{img-path}/girl.png') no-repeat left 0 center, url('@{img-path}/background.jpg') center center no-repeat;
+	background-size: contain, cover;
+
+	.transition(0.1s linear background-position);
 
     & when (@sticky-footer = true) {
 	    min-height: 100%;
 	    padding-bottom: @footer-height;
 	    margin-bottom: -@footer-height;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: 30;
+		height: 102%;
+		left: 50%;
+		top: 0;
+		width: 326px;
+		margin-left: 37rem;
+		background: url('@{img-path}/brush.png') no-repeat left top;
+		background-size: contain;
 	}
 }

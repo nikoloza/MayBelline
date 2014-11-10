@@ -18,10 +18,12 @@
 
 html {
     .transform(translateZ(0)); // for full hardware acceleration: http://cl.ly/image/2F3K0J1O1B2Y
+    overflow-x: hidden;
 }
 
 body {
     background: @white;
+    overflow-x: hidden;
 }
 
 .content {
@@ -58,7 +60,12 @@ body {
 		min-height: 9.4rem;
 
 		li {
+			a {
+				display: block;
+			}
+
 			img {
+				display: block;
 				background: @white;
 				width: 100%;
 				.shadow(0 0 10px @darkgray);
@@ -69,8 +76,8 @@ body {
 	.maybelline {
 		padding-left: 3rem;
 		letter-spacing: 3rem;
-		line-height: 1;
-		margin: 5rem 0 -.7rem;
+		line-height: .7;
+		margin: 5rem 0 0;
 		.scale(1, 0.8);
 		.sizing;
 	}

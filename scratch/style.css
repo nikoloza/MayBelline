@@ -4672,11 +4672,12 @@ section.container {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  background: url('img/background.jpg') center center no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url('img/girl.png') no-repeat left 0 center, url('img/background.jpg') center center no-repeat;
+  background-size: contain, cover;
+  -webkit-transition: 0.1s linear background-position;
+  -moz-transition: 0.1s linear background-position;
+  -o-transition: 0.1s linear background-position;
+  transition: 0.1s linear background-position;
 }
 section.container:after {
   content: "";
@@ -4685,12 +4686,23 @@ section.container:after {
   height: 0;
   float: none;
 }
+section.container:after {
+  content: "";
+  position: absolute;
+  z-index: 30;
+  height: 102%;
+  left: 50%;
+  top: 0;
+  width: 326px;
+  margin-left: 37rem;
+  background: url('img/brush.png') no-repeat left top;
+  background-size: contain;
+}
 section.content {
   max-width: 76rem;
   margin: 0 auto;
 }
 footer.footer {
-  position: relative;
   background: #ffffff;
   padding: .3rem;
 }
@@ -4707,9 +4719,11 @@ html {
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
+  overflow-x: hidden;
 }
 body {
   background: #ffffff;
+  overflow-x: hidden;
 }
 .content h2,
 .content h5 {
@@ -4740,7 +4754,11 @@ body {
   margin: 2rem 0 3rem;
   min-height: 9.4rem;
 }
+.content .instagram li a {
+  display: block;
+}
 .content .instagram li img {
+  display: block;
   background: #ffffff;
   width: 100%;
   -webkit-box-shadow: 0 0 10px #444444, inset 0 0 0;
@@ -4750,8 +4768,8 @@ body {
 .content .maybelline {
   padding-left: 3rem;
   letter-spacing: 3rem;
-  line-height: 1;
-  margin: 5rem 0 -0.7rem;
+  line-height: .7;
+  margin: 5rem 0 0;
   -webkit-transform: scale(1, 0.8);
   -moz-transform: scale(1, 0.8);
   -ms-transform: scale(1, 0.8);
@@ -4811,6 +4829,9 @@ footer.footer .ny {
   .hide-small-screen {
     display: none;
   }
+  section.container {
+    background: url('img/girl.png') no-repeat left -30rem center, url('img/background.jpg') center center no-repeat;
+  }
 }
 @media all and (min-width: 1336px) {
   .show-small-screen {
@@ -4843,6 +4864,12 @@ footer.footer .ny {
   .hide-small-tablet {
     display: none;
   }
+  section.container {
+    background: url('img/girl.png') no-repeat left -60rem center, url('img/background.jpg') center center no-repeat;
+  }
+  section.container:after {
+    display: none;
+  }
 }
 @media all and (min-width: 840px) {
   .show-small-tablet {
@@ -4861,6 +4888,9 @@ footer.footer .ny {
   }
   html {
     font-size: 9px;
+  }
+  .content .instagram li {
+    margin-bottom: 0.5rem;
   }
   .content .maybelline {
     padding-left: 1.5rem;
