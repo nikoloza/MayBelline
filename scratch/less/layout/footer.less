@@ -1,7 +1,13 @@
 footer.footer {
+	position: relative;
+	background: @white;
+	padding: .3rem;
+
+	.centered {
+		max-width: 63rem;
+	}
+
     & when (@sticky-footer = true) {
     	height: @footer-height;
     }
-
-    .copyright {}
 }

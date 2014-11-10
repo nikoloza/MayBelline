@@ -31,7 +31,7 @@
 		}
 	}
 
-	&.side-padding {
+	&.no-side-padding {
 		margin-left: -@grid-padding / 2;
 		margin-right: -@grid-padding / 2;
 	}
@@ -44,10 +44,21 @@
 			padding-left: @grid-padding * 2;
 		}
 
-		&.side-padding {
+		&.no-side-padding {
 			margin-left: -@grid-padding * 2;
-			width: 100%;
-			width: calc(~'100% + ' @grid-padding * 4)
+		}
+	}
+
+	&.half-padding {
+		& > li,
+		& > div,
+		& > .cell {
+			padding-right: @grid-padding / 4;
+			padding-left: @grid-padding / 4;
+		}
+
+		&.no-side-padding {
+			margin-left: -@grid-padding / 4;
 		}
 	}
 

@@ -24,6 +24,66 @@ body {
     background: @white;
 }
 
+.content {
+	h2,
+	h5 {
+		margin: 0;
+
+		img {
+			// font-size: .91em;
+			vertical-align: -.1rem;
+			margin-right: .5rem;
+			height: 3.5rem;
+		}
+	}
+
+	.yellow {
+		margin-right: 1rem;
+	}
+
+	.video {
+		border: 2px solid @pink;
+		margin-bottom: 3rem;
+		.shadow(0 0 20px @darkgray);
+
+		img {
+			display: block;
+			width: 100%;
+			background: @white;
+		}
+	}
+
+	.instagram {
+		margin: 2rem 0 3rem;
+		min-height: 9.4rem;
+
+		li {
+			img {
+				background: @white;
+				width: 100%;
+				.shadow(0 0 10px @darkgray);
+			}
+		}
+	}
+
+	.maybelline {
+		padding-left: 3rem;
+		letter-spacing: 3rem;
+		line-height: 1;
+		margin: 5rem 0 -.7rem;
+		.scale(1, 0.8);
+		.sizing;
+	}
+}
+
+footer.footer {
+    .ny {
+		letter-spacing: 1.5rem;
+		margin-right: -1.8rem;
+		margin-top: -.4rem;
+		.scale(1, 0.7);
+    }
+}
 
 // include responsive files
 .responsive();

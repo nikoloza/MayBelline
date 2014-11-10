@@ -1,42 +1,79 @@
 <!DOCTYPE html>
 <html ng-app="MayBelline">
 <head>
-	<meta charset="utf-8">
-	<link rel="shortcut icon" href="img/favicon.png?v=1.1">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/favicon.png?v=1.1">
 
-	<title>MayBelline</title>
+    <title>MayBelline</title>
 
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-	<meta name="format-detection" content="telephone=no">
-	<meta name="viewport" content="width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
 
-  	<!-- we use single css file for better performance -->
-	<link rel="stylesheet" type="text/css" href="scratch/style.css">
+    <!-- we use single css file for better performance -->
+    <link rel="stylesheet" type="text/css" href="scratch/style.css">
 
-	<!--[if lt IE 10]>
-		<script type="text/javascript" src="scratch/js/html5shiv.js"></script>
-	<![endif]-->
+    <!--[if lt IE 10]>
+        <script type="text/javascript" src="scratch/js/html5shiv.js"></script>
+    <![endif]-->
 
 </head>
 <body>
 
-	<section class="container">
+    <section class="container">
+        <section class="content align center">
 
-		<ul class="instagram row8 mobile4" ng-controller="instagramCtrl">
-			<li ng-repeat="pic in pics | limitTo:8">
-				<a ng-href="{{pic.link}}" target="_blank">
-					<img ng-src="{{pic.images.low_resolution.url}}" alt="">
-				</a>
-			</li>
-		</ul>
+            <section class="video">
+                <img src="img/eye.jpg" alt="Video">
+            </section>
 
-	</section>
+            <h2 class="uppercase">
+                <span class="yellow">Konkurranse</span>
+                <img src="scratch/svg/instagram.svg" alt="#goextremeno">#goextremeno
+                <!-- <i class="icon instagram"></i> -->
+            </h2>
 
-	<!-- Javascripts -->
-	<script type="text/javascript" src="scratch/lib.min.js"></script>
-	<script type="text/javascript" src="scratch/app.js"></script>
+            <h5 class="uppercase">Vinn Maybelline New York GO Extreme make-up kit (verdt 500 NOK)!</h5>
+
+            <ul class="instagram row8 mobile4 half-padding no-side-padding" ng-controller="instagramCtrl">
+                <li ng-repeat="pic in pics | limitTo:8">
+                    <a ng-href="{{pic.link}}" target="_blank">
+                        <img ng-src="{{pic.images.low_resolution.url}}" alt="">
+                    </a>
+                </li>
+            </ul>
+
+            <p class="h6">Legg ut ditt fineste makeup bilde som du tagger med #GOEXTREMENO. <br> Bildene vises i feeden over. De tre fineste med flest likes vinner premier.</p>
+
+            <p class="h8">
+                <a class="yellow">Konkurransereglene og vilkår</a>
+                Følg oss på Facebook:
+                <a href="https://www.facebook.com/Maybelline.Norge" target="_blank">https://www.facebook.com/Maybelline.Norge</a>
+            </p>
+
+            <h1 class="maybelline light helvetica">MAYBELLINE</h1>
+        </section>
+
+    </section>
+
+    <footer class="footer red uppercase">
+        <div class="centered row2 no-padding">
+            <div>
+                <span class="h9 semibold">Maybe she's born with it. Maybe it's maybelline®.</span><br>
+                <span class="h12">2014 © MayBeeline LLC</span>
+            </div>
+
+            <div class="align right">
+                <div class="ny h4">New York</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascripts -->
+    <script type="text/javascript" src="scratch/lib.min.js"></script>
+    <script type="text/javascript" src="scratch/app.js"></script>
 
 </body>
 </html>

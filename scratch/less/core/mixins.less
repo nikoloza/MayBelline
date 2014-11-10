@@ -53,6 +53,14 @@
             transform-origin: @property;
 }
 
+.scale (@x: 1, @y: 1) {
+    -webkit-transform: scale(@x, @y);
+       -moz-transform: scale(@x, @y);
+        -ms-transform: scale(@x, @y);
+         -o-transform: scale(@x, @y);
+            transform: scale(@x, @y);
+}
+
 .translate (@top: -50%, @left: -50%) {
     -webkit-transform: translate(@top, @left);
        -moz-transform: translate(@top, @left);
