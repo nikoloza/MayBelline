@@ -440,6 +440,9 @@ address {
 .h12 {
   font-size: 0.8rem;
 }
+.no-wrap {
+  white-space: nowrap;
+}
 .align.right {
   text-align: right;
 }
@@ -4856,6 +4859,16 @@ footer.footer .ny {
   .hide-mobile {
     display: none;
   }
+  html {
+    font-size: 9px;
+  }
+  .content .maybelline {
+    padding-left: 1.5rem;
+    letter-spacing: 1.5rem;
+  }
+  footer.footer .ny {
+    margin-right: 0;
+  }
 }
 @media all and (min-width: 728px) {
   .show-mobile {
@@ -4871,6 +4884,11 @@ footer.footer .ny {
   }
   .hide-small-mobile {
     display: none;
+  }
+  .content .maybelline {
+    padding-left: .5rem;
+    letter-spacing: .5rem;
+    font-size: 4.4rem;
   }
 }
 @media all and (min-width: 480px) {
