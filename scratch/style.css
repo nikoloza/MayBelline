@@ -4674,10 +4674,10 @@ section.container {
   box-sizing: border-box;
   background: url('img/girl.png') 0 center no-repeat, url('img/background.jpg') center center no-repeat;
   background-size: contain, cover;
-  -webkit-transition: 0.1s linear background-position;
-  -moz-transition: 0.1s linear background-position;
-  -o-transition: 0.1s linear background-position;
-  transition: 0.1s linear background-position;
+  -webkit-transition: 0.5s linear background-position;
+  -moz-transition: 0.5s linear background-position;
+  -o-transition: 0.5s linear background-position;
+  transition: 0.5s linear background-position;
 }
 section.container:after {
   content: "";

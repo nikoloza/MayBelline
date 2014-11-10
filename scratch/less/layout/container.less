@@ -5,13 +5,10 @@ section.container {
 	.sizing;
 	.clearfix;
 
-	// background: url('@{img-path}/background.jpg') center center no-repeat;
-	// .bgsize(cover);
-
 	background: url('@{img-path}/girl.png') 0 center no-repeat, url('@{img-path}/background.jpg') center center no-repeat;
 	background-size: contain, cover;
 
-	.transition(0.1s linear background-position);
+	.transition(0.5s linear background-position);
 
     & when (@sticky-footer = true) {
 	    min-height: 100%;
