@@ -4672,7 +4672,7 @@ section.container {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  background: url('img/girl.png') no-repeat left 0 center, url('img/background.jpg') center center no-repeat;
+  background: url('img/girl.png') 0 center no-repeat, url('img/background.jpg') center center no-repeat;
   background-size: contain, cover;
   -webkit-transition: 0.1s linear background-position;
   -moz-transition: 0.1s linear background-position;
@@ -4830,7 +4830,8 @@ footer.footer .ny {
     display: none;
   }
   section.container {
-    background: url('img/girl.png') no-repeat left -30rem center, url('img/background.jpg') center center no-repeat;
+    background: url('img/girl.png') no-repeat -300px center, url('img/background.jpg') center center no-repeat;
+    background-size: contain, cover;
   }
 }
 @media all and (min-width: 1336px) {
@@ -4865,7 +4866,8 @@ footer.footer .ny {
     display: none;
   }
   section.container {
-    background: url('img/girl.png') no-repeat left -60rem center, url('img/background.jpg') center center no-repeat;
+    background: url('img/girl.png') -600px center no-repeat, url('img/background.jpg') center center no-repeat;
+    background-size: contain, cover;
   }
   section.container:after {
     display: none;

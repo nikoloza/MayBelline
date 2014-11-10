@@ -64,7 +64,7 @@ module.exports = function(grunt) {
             },
             app: {
             	files: {
-            		'app.ng.js': 'app.js'
+            		'scratch/app.ng.js': 'scratch/app.js'
             	}
             }
         },
@@ -84,12 +84,14 @@ module.exports = function(grunt) {
 
             // developer js
             app: {
-                options: {
-                    sourceMap: true,
-                    sourceMapName: 'scratch/app.min.map'
-                },
                 files: {
                     'scratch/app.min.js': 'scratch/app.ng.js'
+                }
+            },
+
+            production: {
+                files: {
+                    'scratch/all.min.js': ['scratch/lib.min.js', 'scratch/app.min.js']
                 }
             },
 
@@ -134,7 +136,7 @@ module.exports = function(grunt) {
         watch: {
             less: {
                 files: 'scratch/less/**/*.less',
-                tasks: 'less',
+                tasks: ['less', 'cssmin'],
                 options: {
                     spawn: true
                 }
@@ -281,7 +283,8 @@ module.exports = function(grunt) {
     grunt.registerTask('production', [
         'default',
         'ngAnnotate',
-        'uglify:app'
+        'uglify:app',
+        'uglify:production'
     ]);
 
 };
