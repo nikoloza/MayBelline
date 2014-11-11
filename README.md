@@ -22,10 +22,11 @@ Clone project by command line and go to working directory
 	$ git clone git@github.com:nikoloza/MayBelline.git maybelline
 	$ cd maybelline
 
+
 -------------
 
 ### Run server
-There is many options how to run simple server. Anyways it will work by opening index.html file simply.
+There is many options how to run simple server. Anyways it will work by opening `index.html` file simply.
 
 Run express based server via Grunt, watch and compile files (the solution will be run on 3333 port):
 
@@ -35,6 +36,8 @@ Run simple http server:
 
 	$ python -m SimpleHTTPServer 3333
 
+
+-------------
 
 ### Setup Grunt
 Used **Grunt** to compile, watch and minify CSS.
